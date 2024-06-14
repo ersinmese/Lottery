@@ -1,4 +1,4 @@
-package com.src.lottery.infrastructure.PostgreSQL;
+package com.src.lottery.infrastructure.repository.PostgreSQL;
 
 
 import com.src.lottery.domain.Lottery;

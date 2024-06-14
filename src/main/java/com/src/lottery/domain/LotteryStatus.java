@@ -1,2 +1,5 @@
-package com.src.lottery.domain;public enum LotteryStatus {
+package com.src.lottery.domain;
+
+public enum LotteryStatus {
+    CREATED,ACTIVE, EXPIRED
 }
