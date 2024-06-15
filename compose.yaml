@@ -1,9 +1,20 @@
 services:
+  app:
+    image: openjdk:17-jdk-slim
+    ports:
+      - 8000:8000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      - 'POSTGRES_DB=lotterydb'
+      - 'POSTGRES_PASSWORD=emese'
+      - 'POSTGRES_USER=emese'
   postgres:
     image: 'postgres:latest'
     environment:
-      - 'POSTGRES_DB=mydatabase'
-      - 'POSTGRES_PASSWORD=secret'
-      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_DB=lotterydb'
+      - 'POSTGRES_PASSWORD=emese'
+      - 'POSTGRES_USER=emese'
     ports:
       - '5432'
